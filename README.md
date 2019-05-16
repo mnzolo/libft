@@ -1,2 +1,2 @@
 # libft
-stdlib.c
+stdlib
