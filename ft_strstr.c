@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 08:43:53 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/21 10:19:28 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/21 10:03:20 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/21 13:26:20 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
-{
-	write(1,&c,1);
-}
 
-char		ft_tolower(int c)
+char	ft_strstr(char *haystack, char *needle)
 {
-	if(c >= 'A' && c <= 'Z')
+	int i;
+
+	i = 0;
+	while( haystack[i] != '\0' && needle[i] != '\0')
 	{
-		c = c + 32;
+		haystack[i] = needle[i];
+		i++;
 	}
-	return(c);
+	if(needle[i] == '\0')
+	{
+		return(&haystack[i]);
+	}
+	if(needle[i] != haystack[i])
+	{
+		return(NULL);
+	}
+	else
+		i = 1;
+	return(&needle[i]);
+
 }

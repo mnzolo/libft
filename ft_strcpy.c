@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 08:43:53 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/21 10:19:28 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/21 16:07:33 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/21 16:33:50 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void	ft_putchar(char c)
+char	*ft_strcpy(char *dest, char *src)
 {
-	write(1,&c,1);
-}
+	int i;
 
-char		ft_tolower(int c)
-{
-	if(c >= 'A' && c <= 'Z')
+	i = 0;
+	while(src == '\0')
 	{
-		c = c + 32;
+		dest[i] = src[i];
+		i++;
 	}
-	return(c);
+	return (dest);
 }

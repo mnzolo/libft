@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 08:43:53 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/21 10:19:28 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/21 14:18:05 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/21 14:18:30 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *s)
 {
-	write(1,&c,1);
-}
+	int i;
 
-char		ft_tolower(int c)
-{
-	if(c >= 'A' && c <= 'Z')
+	i = 0;
+	while(s[i])
 	{
-		c = c + 32;
+		i++;
 	}
-	return(c);
+	return(i);
 }
+
