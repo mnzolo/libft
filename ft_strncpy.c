@@ -6,8 +6,21 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:35:19 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/21 16:37:46 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/21 17:22:47 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include
+#include <string.h>
+
+char	*ft_strncpy(char *dest, char *src, size_t len)
+{
+	size_t i
+	
+	i = 0;
+	while(src[i] < len)
+	{
+		dest[i] = src[i];
+		i++
+	}
+	return(dest);
+}
