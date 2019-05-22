@@ -1,38 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:03:20 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/22 16:07:36 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/22 15:21:30 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/22 17:54:35 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
 
-char	ft_strstr(char *haystack, char *needle)
+void	*ft_memccpy(void *dst, void *src,int c, size_t n)
 {
-	int i;
+	size_t i;
+	char *a;
+	char *b;
 
 	i = 0;
-	while( haystack[i] != '\0' && needle[i] != '\0')
+	a = (char*)dst;
+	b = (char*)src;
+
+	while(i == n)
 	{
-		haystack[i] = needle[i];
-		i++;
-	}
-	if(needle[i] == '\0')
-	{
-		return(&haystack[i]);
-	}
-	if(needle[i] != haystack[i])
-	{
+		a[i] = b[i];
+		if( i == c)
+		{
+			return(b);
+		}
+		else
+			i++;
 		return(NULL);
 	}
-	else
-		i = 1;
-	return(&needle[i]);
+}
 
+int	main()
+{
+	char *str1 = " ";
+	char *str2 = "nzolo";
+
+	printf("%s",memccpy(str1,str2,'z',2));
+	return(0);
 }

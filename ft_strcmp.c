@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:47:36 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/20 17:03:33 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/22 11:26:41 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,3 @@ int		ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int main(void)
-{
-	char *str1 = "he";
-	char *str2 = "he";
-
-	printf("%d", ft_strcmp(str1,str2));
-	return (0);
-}
