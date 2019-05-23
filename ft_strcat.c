@@ -1,43 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 13:08:54 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/23 13:10:53 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/23 11:46:59 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/23 17:19:41 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
 
-void	ft_memcpy(void *dst, void *src, size_t n)
+char	*ft_strcat(char *s1, char *s2)
 {
-	size_t i;
-	char	*a;
-	char	*b;
+	int x;
+	int y;
 
-	a = (char*)dst;
-	b = (char*)src;
-	i = 0;
-	while( i < n)
+	x = 0;
+	y = 0;
+	while(s1[x])
 	{
-		a[i] = b[i];
-		i++;
+		x++;
 	}
-	return (a);
-}
-
-int    main(void)
-{
-    char str[19] = "This is an example";
-    int i;
-
-    i = 0;
-    printf("%s\n", ft_memcpy(str + 7, str, 8));
-    /*for (i = 0; i < 12; i++)
-        printf("%c |", dest[i]);*/
-    return (0);
+	while(s2[y] !='\0')
+	{
+		s1[x] = s2[y];
+		x++;
+		y++;
+	}
+	s1[x] = '\0';
+	return(s1);
 }
