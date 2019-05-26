@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/26 08:37:36 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/26 09:14:12 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/26 11:01:25 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/26 12:11:16 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libc.h>
+#include <stdio.h>
 
-void	*ft_memchr(void *s, int c, size_t n)
+int	ft_strequ(char *s1, char *s2)
 {
-	size_t i;
-	char *s2;
-	unsigned char c2;
+	int i;
+	int j;
 
 	i = 0;
-	s2 = (char*)s;
-	c2 = (unsigned char)c;
-
-	while (s2[i] != '\0' && i < n)
+	while( s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 	{
-		if( s2[i] == c2)
-		{
-			i++;
-			return (s + i);
-		}
+		i++;
 	}
-	return (NULL);	
+	j = (s1[i] - s2[i]);
+
+	if(j == 0)
+	{
+		return(1);
+	}
+	return (0);
+}
+
+int	main()
+{
+	char str1[5] = "mtho";
+	char str2[5] = "mtho";
+
+	printf("%d", ft_strequ(str1,str2));
+	return (0);
 }
