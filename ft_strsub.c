@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:46:59 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/27 17:24:42 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/27 09:53:00 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/27 15:32:37 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strcat(char *s1, char *s2)
+char *ft_strsub(char *s, unsigned int start, size_t len)
 {
-	int x;
-	int y;
+	size_t i;
+	char *j;
 
-	x = 0;
-	y = 0;
-	while(s1[x])
+	i = 0;
+	j = (char *)malloc(sizeof(char)*(len + 1));
+	while(s[i] != '\0' && i < len)
 	{
-		x++;
+		i++;
+		if(s[i] == start)
+		{
+			return(s + i);
+		}
 	}
-	while(s2[y] !='\0')
-	{
-		s1[x] = s2[y];
-		x++;
-		y++;
-	}
-	s1[x] = '\0';
-	return(s1);
+	return (NULL);
 }

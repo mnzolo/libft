@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:46:59 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/27 17:24:42 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/27 08:49:59 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/27 09:40:19 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdio.h>
 
-char	*ft_strcat(char *s1, char *s2)
+int	ft_strnequ(char	*s1, char *s2, size_t n)
 {
-	int x;
-	int y;
+	size_t i;
+	size_t j;
 
-	x = 0;
-	y = 0;
-	while(s1[x])
+	i = 0;
+	while(s1[i] != '\0' && s2[i] != '\0' && i < n && s1[i] == s2[i])
 	{
-		x++;
+		i++;
 	}
-	while(s2[y] !='\0')
+	j = (s1[i] - s2[i]);
+	if( j == 0)
 	{
-		s1[x] = s2[y];
-		x++;
-		y++;
+		return (1);
 	}
-	s1[x] = '\0';
-	return(s1);
+	return (0);
+}
+
+int main()
+{
+	char str1[] = "mthoko";
+	char str2[] = "nzolo";
+
+	printf("%d", ft_strnequ(str1,str2,4));
+	return (0);
 }

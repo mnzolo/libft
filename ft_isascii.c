@@ -4,6 +4,7 @@ int		isascii(int c)
 {
 	if(c >= 0 && c <= 177)
 	{
-		return (c);
+		return (1);
 	}
+	return(0);
 }
