@@ -6,11 +6,11 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:47:36 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/26 11:41:28 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/28 17:25:35 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int		ft_strcmp(char *s1, char *s2)
 {
@@ -21,19 +21,3 @@ int		ft_strcmp(char *s1, char *s2)
 		i++;
 	return (s1[i] - s2[i]);
 }
-int main()
-{
-    char *s1 = "hello";
-    char *s2 = "world";
- 
-    printf("Address of string pointed by s1 = %s\n", s1);
-    printf("Address of string pointed by s2 = %s\n\n", s2);
- 
-    printf("Is s1 == s2 ? %u\n", s1 == s2);
-    printf("Is s1 > s2 ? %u\n", s1 > s2);
-    printf("Is s1 < s2 ? %u\n", s1 < s2);
- 
-    // signal to operating system program ran fine
-    return 0;
-}
-

@@ -6,22 +6,22 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:48:40 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/24 10:54:24 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/28 17:33:31 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
-	char *a;
+	size_t	i;
+	char	*a;
 
 	a = (char*)s;
 	i = 0;
-	if(n > 0)
+	if (n > 0)
 	{
-		while(a[i] != '\0' && i < n && n != 0)
+		while (a[i] != '\0' && i < n && n != 0)
 		{
 			a[i] = 0;
 			i++;

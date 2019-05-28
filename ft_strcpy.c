@@ -6,18 +6,18 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:07:33 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/21 16:33:50 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/28 17:25:25 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {
 	int i;
 
 	i = 0;
-	while(src == '\0')
+	while (src == '\0')
 	{
 		dest[i] = src[i];
 		i++;

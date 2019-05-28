@@ -6,11 +6,11 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 16:10:20 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/23 17:37:48 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/28 18:02:58 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strncat(char *s1, char *s2, size_t n)
 {
@@ -19,16 +19,16 @@ char	*ft_strncat(char *s1, char *s2, size_t n)
 
 	x = 0;
 	y = 0;
-	while(s1[x])
+	while (s1[x])
 	{
 		x++;
 	}
-	while(s2[y] != '\0' && y < n)
+	while (s2[y] != '\0' && y < n)
 	{
 		s1[x] = s2[y];
 		x++;
 		y++;
 	}
-	s1[x] |= '\0';
-	return(s1);
+	s1[x] != '\0';
+	return (s1);
 }

@@ -6,21 +6,20 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:18:05 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/21 14:18:30 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/28 18:03:04 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_strlen(char *s)
 {
 	int i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
-

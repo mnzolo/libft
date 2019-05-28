@@ -6,21 +6,21 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:35:19 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/23 16:08:55 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/28 18:12:44 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, char *src, size_t len)
 {
-	size_t i
-	
+	size_t	i;
+
 	i = 0;
-	while(src[i] < len)
+	while (src[i] < len)
 	{
 		dest[i] = src[i];
-		i++
+		i++;
 	}
-	return(dest);
+	return (dest);
 }
