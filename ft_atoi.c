@@ -6,19 +6,11 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:56:26 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 18:21:42 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/30 14:30:44 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isdigit(int i)
-{
-	if (i >= '0' && i <= '9')
-		return (1);
-	else
-		return (0);
-}
 
 int	ft_atoi(const char *str)
 {
@@ -29,7 +21,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	neg = 1;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-			|| str[i] == '\f' || str[i] == '\b')
+			|| str[i] == '\f' || str[i] == '\b' || str[i] == '\r')
 	{
 		i++;
 	}
