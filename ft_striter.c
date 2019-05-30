@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 08:43:53 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 15:14:09 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/29 12:59:25 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/29 13:26:44 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_striter(char *s, void (*f)(char*))
 {
-	write(1, &c, 1);
-}
+	unsigned int i;
 
-char	ft_tolower(int c)
-{
-	if (c >= 'A' && c <= 'Z')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		c = c + 32;
+		f(&s[i++]);
 	}
-	return (c);
 }

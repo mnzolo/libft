@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:35:19 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/28 18:12:44 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/29 16:21:06 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strncpy(char *dest, char *src, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (src[i] < len)
+	while (i < len)
 	{
 		dest[i] = src[i];
 		i++;

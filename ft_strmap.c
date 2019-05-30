@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 08:43:53 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 15:14:09 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/05/29 13:48:27 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/05/29 15:22:28 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	write(1, &c, 1);
-}
+	unsigned int i;
+	char *s2;
+	char *j;
 
-char	ft_tolower(int c)
-{
-	if (c >= 'A' && c <= 'Z')
+	i = 0;
+	s2 = (char *)s;
+	j = (char *)malloc(sizeof(char) * (ft_strlen(s)));
+	while (s[i] != '\0')
 	{
-		c = c + 32;
+		j[i] = f(s2[i]);
+		i++;
 	}
-	return (c);
+	return (j);
 }
