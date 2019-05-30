@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 12:11:23 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 16:56:30 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/30 16:45:49 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ char			*ft_strjoin(char *s1, char *s2);
 size_t			ft_strlcat(char *dst, char *src, size_t dstsize);
 int				ft_strlen(const char *s);
 char			*ft_strncat(char *s1, char *s2, size_t n);
-int				ft_strncmp(char *s1, char *s2, size_t n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dest, char *src, size_t len);
 char			*ft_strnstr(char *haystack, char *needle, size_t len);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strrchr(char *s, int c);
-char			*ft_strstr(char *haystack, char *needle);
+char			*ft_strstr(const char *haystack, const char *needle);
 char			ft_tolower(int c);
 int				ft_toupper(int c);
 char			*ft_strsub(char *s, unsigned int start, size_t len);
