@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 15:21:30 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/28 17:31:59 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/01 12:18:30 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ void	*ft_memccpy(const void *dst, void *src, int c, size_t n)
 		a[i] = b[i];
 		i++;
 	}
-	if (i == n)
+	if (b[i] == c2)
 	{
-		return (NULL);
+		a[i] = b[i];
+		i++;
+		return (a + i);
 	}
 	else
-		return (a + i + 1);
+		return (NULL);
 }

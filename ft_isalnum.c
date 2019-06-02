@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:02:06 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/28 13:04:56 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/31 11:08:22 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isalnum(int c)
 	unsigned char c2;
 
 	c2 = (unsigned char)c;
-	if (ft_isalpha(c) && ft_isdigit(c))
+	if (ft_isalpha(c) || ft_isdigit(c))
 	{
 		return (1);
 	}

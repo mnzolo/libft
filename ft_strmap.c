@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:48:27 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 15:22:28 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/01 14:29:48 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	unsigned int i;
-	char *s2;
-	char *j;
+	unsigned int	i;
+	char			*s2;
+	char			*j;
 
 	i = 0;
 	s2 = (char *)s;

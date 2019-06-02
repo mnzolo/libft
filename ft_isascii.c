@@ -6,18 +6,15 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:14:35 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 16:46:25 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/05/31 11:12:19 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		isascii(int c)
+int		ft_isascii(int c)
 {
-	unsigned int c2;
-
-	c2 = (unsigned int)c;
-	if (c2 >= 48 && c2 <= 127)
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}
