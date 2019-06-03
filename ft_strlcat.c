@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 08:39:19 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/30 09:26:45 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/03 18:15:02 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 	{
 		x++;
 	}
-	while (src[y] != '\0' && y < dstsize )
+	while (src[y] != '\0' && (y + x  + 1) < dstsize )
 	{
-		dst[x] = src[y];
-		x++;
+		dst[x + y] = src[y];
 		y++;
 	}
-	return (x);
+	dst[x + y] = '\0';
+	return (ft_strlen(dst) + ft_strlen(src));
 }

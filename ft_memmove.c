@@ -6,23 +6,31 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 10:02:23 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/26 10:57:52 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/03 14:24:10 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-/*
-void *ft_memmove(void *dst, void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-}*/
+	char	*d;
+	char	*s;
+	char	c[len];
+	size_t	i;
+	size_t	j;
 
-int	main()
-{
-	char str1[] = "mtho";
-	char str2[] = "nzolo";
-
-	printf("%s\n",memmove(str2,str1,5));
-	return (0);
+	i = 0;
+	j = 0;
+	s = (char *)src;
+	d = (char *)dst;
+	ft_memcpy(c, s, len);
+	while (i < len && j < len)
+	{
+		d[i] = c[j];
+		i++;
+		j++;
+	}
+	len--;
+	return (d);
 }
