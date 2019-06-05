@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:46:59 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/06/05 14:12:47 by mnzolo           ###   ########.fr       */
+/*   Created: 2019/06/05 16:46:26 by mnzolo            #+#    #+#             */
+/*   Updated: 2019/06/05 18:10:00 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, char *s2)
+char	*ft_strnew(size_t size)
 {
-	int x;
-	int y;
+	char	*r;
+	char	*n;
 
-	x = 0;
-	y = 0;
-	while (s1[x])
-	{
-		x++;
-	}
-	while (s2[y] != '\0')
-	{
-		s1[x] = s2[y];
-		x++;
-		y++;
-	}
-	s1[x] = '\0';
-	return (s1);
+	n = (char *)malloc(sizeof(char *) * (size));
+	r = 0;
+	while ( n == r && r++ )
+		*n = '\0';
+	return (n);
 }
