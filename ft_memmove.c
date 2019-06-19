@@ -27,9 +27,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	}
 	s = (unsigned char *)src;
-	d = (unsigned char *)dst;
-	ft_memcpy(c, s, len);
-	while (i < len && j < len)
+	d = (unsigned char *)dst; 
+	ft_memcpy(c, s, len);//this
+	while (i < len && j < len)//this, isn't it the same
 	{
 		d[i] = c[j + i];
 		i++;
