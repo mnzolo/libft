@@ -6,16 +6,11 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:57:27 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 12:51:40 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/27 14:49:39 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int		ft_toupper(int c)
 {

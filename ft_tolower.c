@@ -6,18 +6,13 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:43:53 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 15:14:09 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/28 07:58:31 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-char	ft_tolower(int c)
+int		ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

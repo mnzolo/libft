@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 16:13:49 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/06/01 14:30:52 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/27 14:21:29 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int		i;
-	int		j;
-	char	*h;
-	char	*n;
+	unsigned int	i;
+	unsigned int	j;
+	char			*h;
+	char			*n;
 
 	i = 0;
 	j = 0;

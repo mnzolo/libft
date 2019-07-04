@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 16:46:26 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/06/05 18:10:00 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/17 11:51:11 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*r;
-	char	*n;
-
-	n = (char *)malloc(sizeof(char *) * (size));
-	r = 0;
-	while ( n == r && r++ )
-		*n = '\0';
-	return (n);
+	return ((char *)ft_memalloc(size + 1));
 }

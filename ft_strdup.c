@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 09:18:17 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/05/29 18:10:30 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/27 12:16:00 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strdup(const char *s1)
 	char	*s2;
 
 	i = 0;
-	s2 = (char*)malloc(sizeof(char) * (ft_strlen(s1 + 1)));
-	if (s2 == 0)
+	s2 = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (s2 == '\0')
 	{
 		return (NULL);
 	}

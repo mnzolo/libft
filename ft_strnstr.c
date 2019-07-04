@@ -6,7 +6,7 @@
 /*   By: mnzolo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:54:37 by mnzolo            #+#    #+#             */
-/*   Updated: 2019/06/05 09:45:42 by mnzolo           ###   ########.fr       */
+/*   Updated: 2019/06/27 15:22:21 by mnzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,16 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 	y = (char *)n;
 	if (y[j] == '\0')
 		return (x);
-	while (x[i] != '\0' && i < len && j < len)
+	while (x[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (x[i + j] == y[j])
+		while (x[i + j] == n[j] && (i + j) < len)
 		{
 			j++;
-			while (y[j] == '\0')
-				return (x + i);
+			if (y[j] == '\0')
+				return ((char *)x + i);
 		}
 		i++;
-		len--;
 	}
 	return (NULL);
 }
